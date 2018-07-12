@@ -1,0 +1,67 @@
+body {
+    background-color:white;
+    text-align: center;
+}
+h1{
+    color: white;
+}
+
+label{
+    color:white;
+}
+
+center{
+    color: black;
+}
+
+form {
+    text-align: left;
+}
+
+.sidenav {
+    height: 100%;
+    width: 300px;
+    background-color: black;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    float: left;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: green;
+}
+
+.main {
+    float: left;
+    width:900px;
+    font-size: 18px; /* Increased text to enable scrolling */
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:color="http://www.w3.org/1999/xhtml">
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+
+    <body>
+    <div class="sidenav">
+        <h1>ADD BOOK</h1>
+        <form method="post" action="/book_add">
+            <p><label><b>Book Name:</b></label></p>
+            <p><input type="text" name="b_name" value="{{data_title}}" required></p>
+            <p><label><b>Author:</b></label></p>
+            <p><input type="text" name="author" value="{{data_author}}" required></p>
+            <p><label><b>Price:</b></label></p>
+            <p><input type="number" name="price" value="{{data_price}}" required></p>
+            <p><button type="submit">Add</button></p>
+        </form>
+    </div>
+    <div class="main">
+        <table>
+            <tr>
+                <th> Book Title </th>
+                <th> Author </th>
+                <th> Price </th>
+            </tr>
+        {%for book in books %}
+            <tr>
+                <td> {{book.b_name}}</td>
+                <td> {{book.author}}</td>
+                <td> {{book.price}}</td>
+                <td> <a href="{{url_for('getBook', book_details=book.id)}}">Edit </a></td>
+                <td> <a href="{{url_for('delete_book', del_book=book.id)}}">Delete </a></td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+
+    </body>
+</html>
